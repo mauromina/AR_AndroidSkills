@@ -80,10 +80,18 @@ public class IdleChanger : MonoBehaviour
 				if(GUI.Button(new Rect(Screen.width - 100 , 70 ,80, 20), "Back"))
 					anim.SetBool ("Back", true);*/
 	}
+    public void Next() {
+        anim.SetBool("Next", true);
+    }
+
+    public void After()
+    {
+        anim.SetBool("Back", true);
+    }
 
 
-	// ランダム判定用関数
-	IEnumerator RandomChange ()
+    // ランダム判定用関数
+    IEnumerator RandomChange ()
 	{
 		// 無限ループ開始
 		while (true) {
